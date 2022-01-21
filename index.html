@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0db854bc03.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <div class="uni">
+                <h2>UNIVERSITY OF WEB</h2>
+            </div>
+            <ul class="nav-links">    
+                <li>Home</li>
+                <li>Courses</li>
+                <li>Register</li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input id="search-txt" type="text" placeholder="Search..">
+            <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+            </a>
+            <!-- <input id="submit" type="submit" value="Submit"> -->
+        </div>
+        <section class="search-text">
+            <h1>Search about our courses.</h1>
+        </section>
+        <section class="categories">
+            
+        </section>
+    </main>
+    <script src="app.js"></script>
+    <script type="text/x-handlebars-template" id="template">
+        {{#each .}}
+        <section class="courses">
+            <h2>{{this.title}}</h2>
+            <img src="https://elearning-aueb.herokuapp.com/static/images/{img}" alt="">
+            <h2>Course Description:</h2>
+            <p>{{this.description}}</p>
+            <h3>Course Objectives</h3>
+            <p>{{this.objectives}}</p>
+        </section>
+        {{/each}}
+    </script>
+</button>
+</body>
+</html>
