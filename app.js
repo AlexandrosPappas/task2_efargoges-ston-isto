@@ -15,21 +15,6 @@ fetch(`https://elearning-aueb.herokuapp.com/categories`)
         console.log(categories[i].title);
         //To valame apla gia elegxo
     }
-    const [a, b, c, d, e] = data
-    console.log(a)
-    console.log(b)
-    console.log(c)
-    console.log(d)
-    console.log(e)
-    const newdata = [...data];
-    // console.log(newdata)
-    console.log(...newdata);
-    // const [id1, ...title1] = [...newdata]
-    // console.log(id1)
-    // const {id2, title2} = id1
-    // console.log(id2)
-    const {id, title} = a
-    console.log(id, title)
 });
 
 // Search var
