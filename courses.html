@@ -10,10 +10,10 @@
     <title>UNIVERSITY OF WEB</title>
 </head>
 <body>
-    <nav>   
+    <nav>
         <div class="uni">
             <a href="index.html"><h2>UNIVERSITY OF WEB</h2></a>
-        </div>  
+        </div>
         <div class="nav-links">
             <div class="dropdown">
                 <button class="courses-button" onclick="fill_template()">Courses</button>
@@ -24,23 +24,12 @@
         </div>
     </nav>
     <main>    
-        <div class="search">
-            <input id="search-txt" type="text" placeholder="Search..">
-            <a class="search-btn" href="#">
-                <i class="fas fa-search"></i>
-            </a>
-        </div>
-        <section class="search-text">
-            <h1>Search about our courses.</h1>
-        </section>
-        <section class="courses-cont">
-            <section class="courses"></section>
-        </section>
+        <section class="all-courses"></section>
     </main>
-    <script type="text/x-handlebars-template" id="template">
+    <script type="text/x-handlebars-template" id="courses-template-id">
         {{#each .}}
-        <section class="courses">
-            <section class="courses-inside">
+        <section class="all-courses">
+            <section class="all-courses-inside">
                 <h2>{{this.title}}</h2>
                 <img src= "https://elearning-aueb.herokuapp.com/static/images/{{this.img}}" alt="course-image">
                 <h2>Course Overview:</h2>
@@ -51,7 +40,6 @@
         </section>
         {{/each}}
     </script>
-
     <script type="text/x-handlebars-template" id="templatenav">
         {{#each .}}
         <div class="dropdown-button">
